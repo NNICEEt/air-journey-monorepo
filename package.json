@@ -1,0 +1,18 @@
+{
+	"name": "air-journey-monorepo",
+	"private": true,
+	"scripts": {
+		"dev:web": "bun --filter ./apps/web run dev",
+		"dev:api": "bun --filter ./apps/api run dev",
+		"dev:cms": "bun --filter ./apps/cms run dev",
+		"dev": "bun --filter ./apps/* run dev",
+		"build": "bun --filter ./packages/* run build && bun --filter ./apps/* run build"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.3.3",
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	}
+}
